@@ -108,12 +108,12 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache:
-          keys:
-            - composer-cache-{{ checksum "composer.lock" }}
-            - composer-cache-
-            - vendor-{{ checksum "composer.lock" }}
-            - vendor-
+      # - restore_cache:
+      #     keys:
+      #       - composer-cache-{{ checksum "composer.lock" }}
+      #       - composer-cache-
+      #       - vendor-{{ checksum "composer.lock" }}
+      #       - vendor-
 
       - run:
           # Set TERMINUS_ENV and related environment variables.
