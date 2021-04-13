@@ -121,9 +121,6 @@ jobs:
           name: setup-environment-vars
           command: /build-tools-ci/scripts/set-environment
       - run:
-          name: Which composer
-          command: which composer
-      - run:
           name: Update composer
           command: ./.ci/build/newcomposer
       - run:
@@ -161,6 +158,10 @@ jobs:
       - run:
           name: sync build artifact
           command: rsync -rz /tmp/web /tmp/vendor /tmp/drush .
+      
+      - run:
+          name: Update composer
+          command: ./.ci/build/newcomposer
 
       # Deploy to Pantheon
       - run:
