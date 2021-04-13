@@ -122,10 +122,10 @@ jobs:
           command: /build-tools-ci/scripts/set-environment
       - run:
           name: Update composer
-          command: composer self-update
+          command: which composer
       - run:
-          name: Check composer version
-          command: composer --version
+          name: run PHP build step
+          command: ./.ci/build/php
       - run:
           name: run PHP build step
           command: ./.ci/build/php
