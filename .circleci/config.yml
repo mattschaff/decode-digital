@@ -121,10 +121,10 @@ jobs:
           name: setup-environment-vars
           command: /build-tools-ci/scripts/set-environment
       - run:
-          name: Update composer
+          name: Which composer
           command: which composer
       - run:
-          name: run PHP build step
+          name: Update composer
           command: ./.ci/build/newcomposer
       - run:
           name: run PHP build step
