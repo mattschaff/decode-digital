@@ -121,9 +121,6 @@ jobs:
           name: setup-environment-vars
           command: /build-tools-ci/scripts/set-environment
       - run:
-          name: Check composer version
-          command: composer --version
-      - run:
           name: Update composer
           command: composer self-update
       - run:
