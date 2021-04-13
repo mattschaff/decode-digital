@@ -125,7 +125,7 @@ jobs:
           command: which composer
       - run:
           name: run PHP build step
-          command: ./.ci/build/php
+          command: ./.ci/build/newcomposer
       - run:
           name: run PHP build step
           command: ./.ci/build/php
