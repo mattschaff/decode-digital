@@ -3,10 +3,3 @@
 
 rm -rf /usr/local/bin/composer
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
-temp_token="$GITHUB_TOKEN"
-echo "GitHub Token: $temp_token"
-composer config --global github-oauth.github.com $temp_token
-
-echo "Changed token:"
-composer config --global github-oauth.github.com

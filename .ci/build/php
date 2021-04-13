@@ -10,4 +10,10 @@ set -eo pipefail
 which composer
 
 # Build Composer Assets
-composer -n build-assets
+
+composer config --global github-oauth.github.com $GITHUB_TOKEN
+
+home=$(composer config --global home)
+cat "$home/auth.json"
+
+composer -n install --ignore-platform-reqs --no-dev
