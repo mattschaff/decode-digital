@@ -14,6 +14,6 @@ which composer
 composer config --global github-oauth.github.com $GITHUB_TOKEN
 
 sanity=$(composer config --global github-oauth.github.com)
-echo {sanity: -4}
+echo ${sanity: -4}
 
 composer -n install --ignore-platform-reqs --no-dev
