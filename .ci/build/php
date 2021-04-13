@@ -7,8 +7,7 @@ set -eo pipefail
 # The web and vendor artifact directories will
 # need to be persisted to other jobs.
 #
-C_V=$(composer --version)
-echo "Composer Version: $C_V"
-composer --version
+which composer
+
 # Build Composer Assets
 composer -n build-assets
