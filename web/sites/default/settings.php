@@ -37,3 +37,5 @@ if (file_exists($local_settings)) {
 if (isset($_SERVER['DOCKSAL_LOCAL'])) {
   include __DIR__ . "/settings.docksal.php";
 }
+
+$databases['default']['default']['namespace'] = 'Drupal\\Driver\\Database\\mysql';

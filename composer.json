@@ -16,6 +16,7 @@
         "drupal/core-composer-scaffold": "^9.0.0",
         "drupal/core-project-message": "^9.0.0",
         "drupal/core-recommended": "^9.0.0",
+        "drupal/mysql56": "^1.1",
         "drush-ops/behat-drush-endpoint": "^9.3",
         "drush/drush": "^8.4.5",
         "pantheon-systems/drupal-integrations": "^8",
