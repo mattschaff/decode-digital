@@ -108,19 +108,21 @@ jobs:
     steps:
       - checkout
 
-      - restore_cache:
-          keys:
-            - composer-cache-{{ checksum "composer.lock" }}
-            - composer-cache-
-            - vendor-{{ checksum "composer.lock" }}
-            - vendor-
+      # - restore_cache:
+      #     keys:
+      #       - composer-cache-{{ checksum "composer.lock" }}
+      #       - composer-cache-
+      #       - vendor-{{ checksum "composer.lock" }}
+      #       - vendor-
 
       - run:
           # Set TERMINUS_ENV and related environment variables.
           # https://github.com/pantheon-systems/docker-build-tools-ci/blob/6.x/scripts/set-environment
           name: setup-environment-vars
           command: /build-tools-ci/scripts/set-environment
-
+      - run:
+          name: Update composer
+          command: ./.ci/build/newcomposer
       - run:
           name: run PHP build step
           command: ./.ci/build/php
@@ -156,6 +158,10 @@ jobs:
       - run:
           name: sync build artifact
           command: rsync -rz /tmp/web /tmp/vendor /tmp/drush .
+      
+      - run:
+          name: Update composer
+          command: ./.ci/build/newcomposer
 
       # Deploy to Pantheon
       - run:
@@ -255,24 +261,10 @@ workflows:
   build_deploy_and_test:
     jobs:
       - configure_env_vars
-      - static_tests
       - build_php
       - deploy_to_pantheon:
           requires:
-            - static_tests
             - build_php
-      - visual_regression_test:
-          requires:
-            - configure_env_vars
-            - deploy_to_pantheon
-          filters:
-            branches:
-              ignore:
-                - master
-      - behat_test:
-          requires:
-            - deploy_to_pantheon
-            - visual_regression_test
 
   scheduled_update_check:
     triggers:
