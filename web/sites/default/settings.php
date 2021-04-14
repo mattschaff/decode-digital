@@ -32,3 +32,8 @@ $local_settings = __DIR__ . "/settings.local.php";
 if (file_exists($local_settings)) {
   include $local_settings;
 }
+
+// Include docksal settings.php when appropriate.
+if (isset($_SERVER['DOCKSAL_LOCAL'])) {
+  include __DIR__ . "/settings.docksal.php";
+}
