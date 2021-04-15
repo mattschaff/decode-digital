@@ -1,4 +1,6 @@
 global-styling:
   css:
     theme:
-      dist/style.css: {}
+      dist/bundle.min.css: {}
+  js:
+    dist/bundle.min.js: {}
