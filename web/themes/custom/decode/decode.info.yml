@@ -1,0 +1,22 @@
+name: 'Decode Advertising Co'
+type: theme
+description: 'Custom theme for Decode Advertising Co'
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: bootstrap4
+
+# Libraries.
+libraries:
+  - decode/global-styling
+
+# Regions.
+regions:
+  header: Header
+  nav_branding: 'Navigation branding region'
+  nav_main: 'Main navigation region'
+  nav_additional: 'Additional navigation region (eg search form, social icons, etc)'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer

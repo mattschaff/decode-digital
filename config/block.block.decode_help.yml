@@ -1,0 +1,22 @@
+uuid: f4d13a81-82ee-4267-8825-d1898e12d6d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - decode
+_core:
+  default_config_hash: VV9kqYMqLSoPSMw-XVpo0auKK0RfnbQTkqYPVQxqaV0
+id: decode_help
+theme: decode
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

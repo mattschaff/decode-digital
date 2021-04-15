@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd web/themes/custom/decode
+
+echo "Building front end assets."
+
+npm i
+
+npm run build-all
+
+cd /home/tester/example_drops_8_composer

@@ -1,0 +1,22 @@
+uuid: 431f439d-fbda-4dff-8a11-198fa9b6c4c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - decode
+_core:
+  default_config_hash: 5kL_iZM_xia3Z8bgsyiZgQphxMGhI8gt2HYo8r5Z7OE
+id: decode_powered
+theme: decode
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: f5b12a6c-48d9-4fec-9e4f-dcce04b96f73
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - decode
+_core:
+  default_config_hash: kF9mVmsseaqxC_a3r0oTNT2MOdiEdr9-6lMUfIa18eI
+id: decode_search_form_wide
+theme: decode
+region: header
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  provider: search
+  label_display: '0'
+  page_id: ''
+visibility: {  }

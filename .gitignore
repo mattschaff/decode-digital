@@ -114,3 +114,6 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+
+# COMPONENT LIBRARY #
+web/component-library

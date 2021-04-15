@@ -1,0 +1,27 @@
+uuid: 24fc5f9a-4400-408b-a898-fb35e9bf3989
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - decode
+_core:
+  default_config_hash: 19CmBQT7OL-3VRx-isvQ5jfGekABppTKv1h5rHK376s
+id: decode_account_menu
+theme: decode
+region: header
+weight: -4
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }
