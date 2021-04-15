@@ -9,7 +9,7 @@ const webpackConfig = {
   mode: 'production',
   entry: ['./index.js'],
   output: {
-    filename: 'bunde.min.js',
+    filename: 'bundle.min.js',
     path: path.resolve(__dirname, './dist'),
   },
   resolve: {

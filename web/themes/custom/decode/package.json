@@ -6,6 +6,7 @@
   "scripts": {
     "watch": "webpack watch",
     "build": "webpack build",
+    "build-all": "webpack build && fractal build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +20,8 @@
     "@babel/core": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
     "@babel/runtime": "^7.13.10",
+    "@frctl/fractal": "^1.5.6",
+    "@frctl/twig": "^1.2.8",
     "babel": "^6.23.0",
     "babel-loader": "^8.2.2",
     "clean-css": "^5.1.2",
