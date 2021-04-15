@@ -1,0 +1,22 @@
+uuid: 707a6d81-4f7b-45a1-abf3-eaeb1db605c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - decode
+_core:
+  default_config_hash: BL6Gcw5Us0zai1ADadlNYLxlEblMedc_3C3lF0PjtCE
+id: decode_content
+theme: decode
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

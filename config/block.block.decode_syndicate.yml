@@ -1,0 +1,23 @@
+uuid: 7b0ab3a2-c833-4c3a-9f1e-df7af453e3ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - decode
+_core:
+  default_config_hash: jGkBUnwRXYacHWTR8hjjwn_a_PRM-Xj_xSHoB0WIfEo
+id: decode_syndicate
+theme: decode
+region: header
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  provider: node
+  label_display: '0'
+  block_count: 10
+visibility: {  }

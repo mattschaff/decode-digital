@@ -1,0 +1,36 @@
+{
+  "name": "decode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack watch",
+    "build": "webpack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/runtime": "^7.13.10",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "clean-css": "^5.1.2",
+    "css-loader": "^5.2.1",
+    "css-minimizer-webpack-plugin": "^2.0.0",
+    "glob": "^7.1.6",
+    "mini-css-extract-plugin": "^1.4.1",
+    "postcss-loader": "^5.2.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "uglify-js": "^3.13.4"
+  }
+}

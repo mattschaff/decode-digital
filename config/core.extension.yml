@@ -62,6 +62,8 @@ theme:
   seven: 0
   adminimal_theme: 0
   olivero: 0
+  bootstrap4: 0
+  decode: 0
 profile: standard
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
