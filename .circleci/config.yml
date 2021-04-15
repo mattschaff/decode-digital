@@ -127,6 +127,10 @@ jobs:
           name: run PHP build step
           command: ./.ci/build/php
 
+      - run:
+          name: Build front end assets
+          command: ./.ci/build/assets
+
       - save_cache:
           key: vendor-{{ checksum "composer.lock" }}
           paths:
@@ -158,7 +162,7 @@ jobs:
       - run:
           name: sync build artifact
           command: rsync -rz /tmp/web /tmp/vendor /tmp/drush .
-      
+
       - run:
           name: Update composer
           command: ./.ci/build/newcomposer
