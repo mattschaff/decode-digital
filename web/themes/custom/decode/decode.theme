@@ -1,6 +1,34 @@
 <?php
 
+use Drupal\decode\theme\ParagraphPreprocessorInterface;
+use Drupal\paragraphs\Entity\Paragraph;
+
+$path = drupal_get_path('theme', 'decode');
+include("$path/includes/helpers.php");
+
 /**
  * @file
- * SUBTHEME theme file.
+ * Decode theme file.
  */
+
+/**
+ * Implements hook_preprocess()
+ */
+function decode_preprocess(array &$variables, $hook): void {
+  $container = get_theme_preprocessor_container();
+  if (!isset($container[$hook])) {
+    return;
+  }
+  switch ($hook) {
+    case 'paragraph':
+      /** @var Paragraph $paragraph */
+      $paragraph = $variables['paragraph'];
+      /** @var ParagraphPreprocessorInterface $handler */
+      foreach ($container[$hook] as $handler) {
+        if ($paragraph->getType() === $handler->paragraphBundle()) {
+          $handler->preprocessParagraph($variables);
+        }
+      }
+    break;
+  }
+}

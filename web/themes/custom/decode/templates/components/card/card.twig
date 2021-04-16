@@ -1,0 +1,20 @@
+<div class="card">
+  <div>
+    {% if image %}
+      <div>
+        <img src="{{ image.src_1x }}" alt="{{ image.alt_text }}" srcset="{{ image.src_1x }}, 1x {{ image.src_2x }} 2x">
+      </div>
+    {% endif %}
+    <div>
+      <div>
+        <h3>{{ title }}</h3>
+        {% if description %}
+          <p>{{ description }}</p>
+        {% endif %}
+      </div>
+      {% if link %}
+        <a href="{{ link.url }}">{{ link.text }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

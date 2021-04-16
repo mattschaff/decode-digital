@@ -1,0 +1,11 @@
+title: Card
+context:
+  title: 'Test content look out.'
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+  image:
+    src_1x: 'https://via.placeholder.com/600x300'
+    src_2x: 'https://via.placeholder.com/1200x600'
+    alt_text: 'Sample alternative text'
+  link:
+    url: 'https://www.google.com'
+    text: 'Click Me'

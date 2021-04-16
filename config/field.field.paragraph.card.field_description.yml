@@ -1,0 +1,21 @@
+uuid: ffd04ca9-27ca-460b-bf6d-da53f2efe573
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.card
+  module:
+    - text
+id: paragraph.card.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: card
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

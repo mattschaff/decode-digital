@@ -1,0 +1,29 @@
+uuid: 6aed33d9-3a2f-4b56-a1eb-4f08e718863e
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+name: images
+label: Images
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  47cce2aa-1ffe-4b98-93d3-64063c799c75:
+    settings:
+      entity_type: media
+      bundle: image
+      form_mode: default
+      submit_text: 'Upload image'
+    uuid: 47cce2aa-1ffe-4b98-93d3-64063c799c75
+    weight: 2
+    label: Upload
+    id: entity_form

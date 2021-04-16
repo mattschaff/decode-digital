@@ -1,2 +1,1 @@
-import './accordion/accordion';
-import './header/header';
+import './card/card';
