@@ -1,0 +1,12 @@
+<?php
+
+use Drupal\distributed_preprocess\Service\DistributedPreprocess;
+
+/**
+ * Implements hook_preprocess()
+ */
+function distributed_preprocess_preprocess(array &$variables, $hook): void {
+  /** @var DistributedPreprocess $service */
+  $service = \Drupal::service('distributed_preprocess');
+  $service->preprocess($variables, $hook);
+}

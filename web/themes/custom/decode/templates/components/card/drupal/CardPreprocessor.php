@@ -2,7 +2,7 @@
 
 namespace Drupal\decode\theme\preprocessors;
 
-use Drupal\decode\theme\PreprocessorBaseParagraph;
+use Drupal\distributed_preprocess\Base\PreprocessorBaseParagraph;
 
 class CardPreprocessor extends PreprocessorBaseParagraph {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\decode\theme;
+namespace Drupal\distributed_preprocess\Base;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;

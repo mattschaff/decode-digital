@@ -1,0 +1,7 @@
+services:
+  distributed_preprocess:
+    class: Drupal\distributed_preprocess\Service\DistributedPreprocess
+    arguments:
+      - '@service_container'
+      - '@theme.manager'
+      - '@theme_handler'
