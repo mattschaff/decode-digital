@@ -177,7 +177,7 @@ class DistributedPreprocess {
       foreach ($component_files as $file) {
         $name = basename($file, '.php');
         /** @var PreprocessorBase $class */
-        $class = call_user_func("{$namespace}\\$name::create", $this->serviceContainer);
+        $class = call_user_func("$namespace\\$name::create", $this->serviceContainer);
         if ($class instanceof PreprocessorBase) {
           $container[$class::ELEMENT_NAME][] = $class;
         }
