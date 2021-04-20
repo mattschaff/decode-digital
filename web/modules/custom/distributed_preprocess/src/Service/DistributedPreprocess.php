@@ -16,7 +16,14 @@ class DistributedPreprocess {
    *
    * @var ContainerInterface
    */
-  protected $container;
+  protected $serviceContainer;
+
+  /**
+   * Preprocessor container
+   *
+   * @var array
+   */
+  protected $preprocessorContainer;
 
   /**
    * Theme handler
@@ -68,7 +75,7 @@ class DistributedPreprocess {
    * @param ThemeHandlerInterface $ThemeHandler
    */
   public function __construct(ContainerInterface $Container, ThemeManagerInterface $ThemeManager, ThemeHandlerInterface $ThemeHandler){
-    $this->container = $Container;
+    $this->serviceContainer = $Container;
     $this->themeManager = $ThemeManager;
     $this->themeHandler = $ThemeHandler;
   }
@@ -163,18 +170,18 @@ class DistributedPreprocess {
    * @return array
    */
   protected function getThemePreprocessorContainer(): array {
-    $container = &drupal_static(__METHOD__);
-    if (is_null($container)) {
+    if (!isset($this->preprocessorContainer)) {
       $component_files = $this->loadPhpFilesInDirectory($this->directory);
       $container = [];
       foreach ($component_files as $file) {
         $name = basename($file, '.php');
         /** @var PreprocessorBase $class */
-        $class = call_user_func("{$this->namespace}\\$name::create", $this->container);
+        $class = call_user_func("{$this->namespace}\\$name::create", $this->serviceContainer);
         $container[$class::ELEMENT_NAME][] = $class;
       }
+      $this->preprocessorContainer = $container;
     }
-    return $container;
+    return $this->preprocessorContainer;
   }
 
 }
