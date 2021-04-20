@@ -173,10 +173,11 @@ class DistributedPreprocess {
     if (!isset($this->preprocessorContainer)) {
       $component_files = $this->loadPhpFilesInDirectory($this->directory);
       $container = [];
+      $namespace = rtrim($this->namespace, '\\'); # Ensure no ending slash
       foreach ($component_files as $file) {
         $name = basename($file, '.php');
         /** @var PreprocessorBase $class */
-        $class = call_user_func("{$this->namespace}\\$name::create", $this->serviceContainer);
+        $class = call_user_func("{$namespace}\\$name::create", $this->serviceContainer);
         if ($class instanceof PreprocessorBase) {
           $container[$class::ELEMENT_NAME][] = $class;
         }
