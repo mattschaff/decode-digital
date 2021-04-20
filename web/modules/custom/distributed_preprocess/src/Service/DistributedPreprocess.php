@@ -156,6 +156,7 @@ class DistributedPreprocess {
    * @return array
    */
   protected function loadPhpFilesInDirectory(string $dir) {
+    $dir = rtrim($dir, DIRECTORY_SEPARATOR); # Ensure no ending slash
     $src_path = drupal_get_path('theme', $this->activeTheme->getName()) . DIRECTORY_SEPARATOR . $dir;
     $src_files = $this->getRecursivePhpFiles($src_path);
     foreach ($src_files as $file) {
