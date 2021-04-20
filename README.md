@@ -10,6 +10,6 @@
 3. Clone the [GitHub repository](https://github.com/DecodeDigitalMarketing/decode-ads) and `cd` to the root directory.
 4. Copy `.docksal/docksal-local.env.example`, rename as `.docksal/docksal-local.env`, and add your Pantheon machine token to this new file as `SECRET_TERMINUS_TOKEN="YOUR_TOKEN"`
 5. Build vendor files and front-end assets
-	a. `composer install` 
-	b. `cd web/themes/custom/decode && npm i && npm run build-all`
+	- `composer install` 
+	- `cd web/themes/custom/decode && npm i && npm run build-all`
 6. Run `fin start`, then `fin pull db`, and `fin pull files` (Note: You might need to enter your Pantheon password after the files command.)
