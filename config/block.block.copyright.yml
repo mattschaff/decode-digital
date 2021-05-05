@@ -1,0 +1,23 @@
+uuid: ad9c01a0-25ea-457d-94a0-18711d2675ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.copyright
+  module:
+    - fixed_block_content
+  theme:
+    - decode
+id: copyright
+theme: decode
+region: footer
+weight: 0
+provider: null
+plugin: 'fixed_block_content:copyright'
+settings:
+  id: 'fixed_block_content:copyright'
+  label: Copyright
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility: {  }

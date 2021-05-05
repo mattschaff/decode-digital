@@ -1,0 +1,14 @@
+uuid: 5d4ad6d1-383c-4bf5-84cd-a72a0bd41d82
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.copyright
+  content:
+    - 'block_content:copyright:56c7b94a-5495-42b2-b807-b72f55f0cfeb'
+id: copyright
+title: Copyright
+block_content_bundle: copyright
+default_content: '{"_links":{"self":{"href":"http:\/\/decode.docksal\/block\/1?_format=hal_json"},"type":{"href":"http:\/\/fixed_block_content.drupal.org\/rest\/type\/block_content\/copyright"}},"langcode":[{"value":"en","lang":"en"}],"type":[{"target_id":"copyright"}],"status":[{"value":true,"lang":"en"}],"info":[{"value":"Copyright","lang":"en"}],"reusable":[{"value":false}],"default_langcode":[{"value":true,"lang":"en"}],"revision_translation_affected":[{"value":true,"lang":"en"}],"metatag":[{"value":{"canonical_url":"http:\/\/decode.docksal\/block\/1","title":"| decode-digital"}}],"field_copyright_text":[{"value":"\u00a9 Copyright 2021 Decode Advertising"}]}'
+auto_export: 1
+protected: true

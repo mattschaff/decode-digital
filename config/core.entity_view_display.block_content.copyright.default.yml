@@ -1,0 +1,22 @@
+uuid: 785a6a90-b961-422c-b848-f51e42c4de3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.copyright
+    - field.field.block_content.copyright.field_copyright_text
+id: block_content.copyright.default
+targetEntityType: block_content
+bundle: copyright
+mode: default
+content:
+  field_copyright_text:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

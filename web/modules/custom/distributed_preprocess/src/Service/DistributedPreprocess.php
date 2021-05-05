@@ -2,9 +2,11 @@
 
 namespace Drupal\distributed_preprocess\Service;
 
+use Drupal\block_content\Entity\BlockContent;
 use Drupal\Core\Extension\ThemeHandlerInterface;
 use Drupal\Core\Theme\ActiveTheme;
 use Drupal\Core\Theme\ThemeManagerInterface;
+use Drupal\distributed_preprocess\Base\BlockContentPreprocessorInterface;
 use Drupal\distributed_preprocess\Base\ParagraphPreprocessorInterface;
 use Drupal\distributed_preprocess\Base\PreprocessorBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -103,7 +105,17 @@ class DistributedPreprocess {
             $handler->preprocessParagraph($variables);
           }
         }
-      break;
+        break;
+      case 'block_content':
+        /** @var BlockContent $block_content */
+        $block = $variables['elements']['#block_content'];
+        /** @var BlockContentPreprocessorInterface $handler */
+        foreach ($container[$hook] as $handler) {
+          if ($block->bundle() === $handler->blockContentBundle()) {
+            $handler->preprocessBlockContent($variables);
+          }
+        }
+        break;
     }
   }
 

@@ -1,0 +1,8 @@
+uuid: 518db9b8-cd0c-4f59-841d-6d6ff6cc56f2
+langcode: en
+status: true
+dependencies: {  }
+id: copyright
+label: Copyright
+revision: 0
+description: ''
