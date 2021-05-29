@@ -7,9 +7,11 @@
     {% endif %}
     <div>
       <div>
-        <h3>{{ title }}</h3>
-        {% if description %}
-          <p>{{ description }}</p>
+        {% if title %}
+          <h3>{{ title }}</h3>
+        {% endif %}
+        {% if text %}
+          {{ text }}
         {% endif %}
       </div>
       {% if link %}

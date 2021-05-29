@@ -3,9 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.card.field_description
     - field.field.paragraph.card.field_image
     - field.field.paragraph.card.field_link
+    - field.field.paragraph.card.field_text
     - field.field.paragraph.card.field_title
     - paragraphs.paragraphs_type.card
   module:
@@ -16,13 +16,6 @@ targetEntityType: paragraph
 bundle: card
 mode: default
 content:
-  field_description:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
   field_image:
     type: entity_reference_entity_view
     weight: 0
@@ -43,6 +36,13 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_text:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_title:
     weight: 1

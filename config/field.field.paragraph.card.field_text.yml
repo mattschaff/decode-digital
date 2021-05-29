@@ -1,19 +1,19 @@
-uuid: ffd04ca9-27ca-460b-bf6d-da53f2efe573
+uuid: bdb36ea8-0616-4303-a774-36dbc35f8919
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_description
+    - field.storage.paragraph.field_text
     - paragraphs.paragraphs_type.card
   module:
     - text
-id: paragraph.card.field_description
-field_name: field_description
+id: paragraph.card.field_text
+field_name: field_text
 entity_type: paragraph
 bundle: card
-label: Description
+label: Text
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

@@ -1,0 +1,7 @@
+uuid: 19783fd3-cb8d-4ab4-9fdd-4756df8c4d14
+langcode: en
+status: true
+dependencies: {  }
+name: 100_percent
+label: '100 Percent'
+effects: {  }

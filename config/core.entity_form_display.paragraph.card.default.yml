@@ -4,9 +4,9 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.images
-    - field.field.paragraph.card.field_description
     - field.field.paragraph.card.field_image
     - field.field.paragraph.card.field_link
+    - field.field.paragraph.card.field_text
     - field.field.paragraph.card.field_title
     - paragraphs.paragraphs_type.card
   module:
@@ -18,14 +18,6 @@ targetEntityType: paragraph
 bundle: card
 mode: default
 content:
-  field_description:
-    weight: 2
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_image:
     weight: 0
     settings:
@@ -48,6 +40,14 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_title:
     weight: 1

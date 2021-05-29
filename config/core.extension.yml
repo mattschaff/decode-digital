@@ -26,12 +26,16 @@ module:
   field: 0
   field_ui: 0
   file: 0
+  file_mdm: 0
+  file_mdm_exif: 0
+  file_mdm_font: 0
   filter: 0
   fixed_block_content: 0
   hal: 0
   help: 0
   history: 0
   image: 0
+  image_effects: 0
   inline_entity_form: 0
   link: 0
   media: 0

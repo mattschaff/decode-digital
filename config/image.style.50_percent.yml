@@ -1,0 +1,16 @@
+uuid: cf005742-10c6-489a-bad0-6ad876871eba
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: 50_percent
+label: '50 Percent'
+effects:
+  2d3725cd-1f5b-49d8-9ac1-a8c49ca0cd9e:
+    uuid: 2d3725cd-1f5b-49d8-9ac1-a8c49ca0cd9e
+    id: image_effects_resize_percentage
+    weight: 1
+    data:
+      width: 50%
+      height: ''
