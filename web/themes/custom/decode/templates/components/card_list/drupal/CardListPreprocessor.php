@@ -18,12 +18,14 @@ class CardListPreprocessor extends PreprocessorBaseParagraph {
     $list_object = $variables['paragraph'];
     /** @var EntityReferenceFieldItemList $list_field */
     $list_field = $list_object->get('field_cards');
-    foreach ($list_field->referencedEntities() as $card) {
+    foreach ($list_field->referencedEntities() as $card_object) {
       $cards[] = [
         'image' => $image,
         'text' => $text,
-        'title' => $title
-      ] = $this->getPreprocessedRenderArrayForEntity('paragraph', $card);
+        'cta' => $cta,
+        'title' => $title,
+      ] = $this->getPreprocessedRenderArrayForEntity('paragraph', $card_object)
+        + array_fill_keys(['image', 'text', 'cta', 'title'], null);
     }
   }
 

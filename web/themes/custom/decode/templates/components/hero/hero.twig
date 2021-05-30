@@ -1,0 +1,22 @@
+<div class="hero">
+  <div>
+    {% if image %}
+      <div>
+        <img src="{{ image.src_1x }}" alt="{{ image.alt_text }}" srcset="{{ image.src_1x }}, 1x {{ image.src_2x }} 2x">
+      </div>
+    {% endif %}
+    <div>
+      <div>
+        {% if title %}
+          <h3>{{ title }}</h3>
+        {% endif %}
+        {% if text %}
+          {{ text }}
+        {% endif %}
+      </div>
+      {% if cta %}
+        <a href="{{ cta.url }}">{{ cta.text }}</a>
+      {% endif %}
+    </div>
+  </div>
+</div>

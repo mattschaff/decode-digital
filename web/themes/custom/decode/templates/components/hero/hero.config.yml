@@ -1,0 +1,10 @@
+title: Hero
+context:
+  title: "Test title."
+  image:
+    src_1x: "https://via.placeholder.com/600x300"
+    src_2x: "https://via.placeholder.com/1200x600"
+    alt_text: "Sample alternative text"
+  cta:
+    url: "https://www.google.com"
+    text: "Click Me"

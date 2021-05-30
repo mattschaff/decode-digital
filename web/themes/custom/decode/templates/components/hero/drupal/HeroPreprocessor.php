@@ -10,7 +10,7 @@ use Drupal\image\Entity\ImageStyle;
 use Drupal\media\Entity\Media;
 use Drupal\paragraphs\Entity\Paragraph;
 
-class CardPreprocessor extends PreprocessorBaseParagraph {
+class HeroPreprocessor extends PreprocessorBaseParagraph {
 
   /**
    * @inheritDoc
@@ -28,14 +28,13 @@ class CardPreprocessor extends PreprocessorBaseParagraph {
         'src_1x' => ImageStyle::load('50_percent')->buildUrl($uri),
       ];
     };
-    $variables['title'] = $paragraph->get('field_title')->value;
-    $variables['text'] = Markup::create($paragraph->get('field_text')->value);
     if (!$paragraph->get('field_link')->isEmpty()) {
       $variables['cta'] = [
         'title' => $paragraph->get('field_link')->title,
         'url' => Url::fromUri($paragraph->get('field_link')->uri),
       ];
     }
+    $variables['title'] = $paragraph->get('field_title')->value;
   }
 
   /**
