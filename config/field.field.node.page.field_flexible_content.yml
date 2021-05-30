@@ -7,6 +7,7 @@ dependencies:
     - node.type.page
     - paragraphs.paragraphs_type.card
     - paragraphs.paragraphs_type.card_list
+    - paragraphs.paragraphs_type.careers
   module:
     - entity_reference_revisions
 id: node.page.field_flexible_content
@@ -25,12 +26,16 @@ settings:
     negate: 0
     target_bundles:
       card: card
+      careers: careers
       card_list: card_list
     target_bundles_drag_drop:
       card:
         enabled: true
         weight: 2
       card_list:
+        enabled: true
+        weight: 4
+      careers:
         enabled: true
         weight: 4
 field_type: entity_reference_revisions

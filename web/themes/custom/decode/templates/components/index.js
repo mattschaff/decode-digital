@@ -1,2 +1,3 @@
 import './card/card';
-import './card/card';
+import './card_list/card_list';
+import './careers/careers';

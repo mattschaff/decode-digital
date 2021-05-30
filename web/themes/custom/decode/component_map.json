@@ -1,3 +1,5 @@
 {
-  "@card": "templates/components/card/card.twig"
+  "@card": "templates/components/card/card.twig",
+  "@card_list": "templates/components/card_list/card_list.twig",
+  "@careers": "templates/components/careers/careers.twig"
 }
