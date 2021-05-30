@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_flexible_content
     - node.type.homepage
+    - paragraphs.paragraphs_type.liquid_drop
   module:
     - entity_reference_revisions
 id: node.homepage.field_flexible_content
@@ -21,7 +22,8 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     negate: 0
-    target_bundles: null
+    target_bundles:
+      liquid_drop: liquid_drop
     target_bundles_drag_drop:
       card:
         weight: 6
@@ -38,4 +40,7 @@ settings:
       hero:
         weight: 10
         enabled: false
+      liquid_drop:
+        enabled: true
+        weight: 8
 field_type: entity_reference_revisions

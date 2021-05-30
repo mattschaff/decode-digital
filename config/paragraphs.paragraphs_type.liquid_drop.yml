@@ -1,0 +1,10 @@
+uuid: 6735898f-0b0c-4adb-89ed-9b31fa23139e
+langcode: en
+status: true
+dependencies: {  }
+id: liquid_drop
+label: 'Liquid Drop'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

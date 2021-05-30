@@ -3,5 +3,6 @@
   "@card_list": "templates/components/card_list/card_list.twig",
   "@careers": "templates/components/careers/careers.twig",
   "@contact_form": "templates/components/contact_form/contact_form.twig",
-  "@hero": "templates/components/hero/hero.twig"
+  "@hero": "templates/components/hero/hero.twig",
+  "@liquid_drop": "templates/components/liquid_drop/liquid_drop.twig"
 }
