@@ -3,9 +3,13 @@
 namespace Drupal\distributed_preprocess\Service;
 
 use Drupal\block_content\Entity\BlockContent;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ThemeHandlerInterface;
 use Drupal\Core\Theme\ActiveTheme;
+use Drupal\Core\Theme\Registry;
 use Drupal\Core\Theme\ThemeManagerInterface;
+use Drupal\Core\Utility\ThemeRegistry;
 use Drupal\distributed_preprocess\Base\BlockContentPreprocessorInterface;
 use Drupal\distributed_preprocess\Base\ParagraphPreprocessorInterface;
 use Drupal\distributed_preprocess\Base\PreprocessorBase;
@@ -70,16 +74,34 @@ class DistributedPreprocess {
   protected $directory;
 
   /**
+   * Entity type manager
+   *
+   * @var EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
+   * Theme registry
+   *
+   * @var Registry
+   */
+  protected $themeRegistry;
+
+  /**
    * Constructs DistributedPreprocess
    *
    * @param ContainerInterface $Container
    * @param ThemeManagerInterface $ThemeManager
    * @param ThemeHandlerInterface $ThemeHandler
+   * @param EntityTypeManagerInterface $EntityTypeManager
+   * @param Registry $ThemeRegistry
    */
-  public function __construct(ContainerInterface $Container, ThemeManagerInterface $ThemeManager, ThemeHandlerInterface $ThemeHandler){
+  public function __construct(ContainerInterface $Container, ThemeManagerInterface $ThemeManager, ThemeHandlerInterface $ThemeHandler, EntityTypeManagerInterface $EntityTypeManager, Registry $ThemeRegistry){
     $this->serviceContainer = $Container;
     $this->themeManager = $ThemeManager;
     $this->themeHandler = $ThemeHandler;
+    $this->entityTypeManager = $EntityTypeManager;
+    $this->themeRegistry = $ThemeRegistry;
   }
 
   /**
@@ -192,12 +214,55 @@ class DistributedPreprocess {
         /** @var PreprocessorBase $class */
         $class = call_user_func("$namespace\\$name::create", $this->serviceContainer);
         if ($class instanceof PreprocessorBase) {
+          $class->setBaseServices($this);
           $container[$class::ELEMENT_NAME][] = $class;
         }
       }
       $this->preprocessorContainer = $container;
     }
     return $this->preprocessorContainer;
+  }
+
+  /**
+   * Get render array for entity, already preprocessed
+   *
+   * @param string $entity_type
+   * @param EntityInterface $entity
+   * @return array
+   */
+  public function getPreprocessedRenderArrayForEntity(string $entity_type, EntityInterface $entity): array {
+    $info = $this->themeRegistry->getRuntime()->get($entity_type);
+    $variables = $this->entityTypeManager->getViewBuilder('paragraph')->view($entity);
+    // If a renderable array is passed as $variables, then set $variables to
+    // the arguments expected by the theme function.
+    if (isset($variables['#theme']) || isset($variables['#theme_wrappers'])) {
+      $element = $variables;
+      $variables = [];
+      if (isset($info['variables'])) {
+        foreach (array_keys($info['variables']) as $name) {
+          if (isset($element["#$name"]) || array_key_exists("#$name", $element)) {
+            $variables[$name] = $element["#$name"];
+          }
+        }
+      }
+      else {
+        $variables[$info['render element']] = $element;
+        // Give a hint to render engines to prevent infinite recursion.
+        $variables[$info['render element']]['#render_children'] = TRUE;
+      }
+    }
+
+    // Merge in argument defaults.
+    if (!empty($info['variables'])) {
+      $variables += $info['variables'];
+    }
+    elseif (!empty($info['render element'])) {
+      $variables += [$info['render element'] => []];
+    }
+    foreach ($info['preprocess functions'] as $fxn) {
+      $fxn($variables, $entity_type, $info);
+    }
+    return $variables;
   }
 
 }

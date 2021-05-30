@@ -5,3 +5,5 @@ services:
       - '@service_container'
       - '@theme.manager'
       - '@theme_handler'
+      - '@entity_type.manager'
+      - '@theme.registry'
