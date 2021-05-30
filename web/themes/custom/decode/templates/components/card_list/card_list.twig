@@ -1,0 +1,13 @@
+<div class="card-list">
+  <ul>
+  {% for card in cards %}
+    <li>
+      {% include '@card' with {
+        image: card.image,
+        text: card.text,
+        title: card.title
+      } %}
+    </li>
+  {% endfor %}
+  </ul>
+</div>
