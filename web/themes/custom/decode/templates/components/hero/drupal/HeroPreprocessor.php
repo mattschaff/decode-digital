@@ -41,6 +41,6 @@ class HeroPreprocessor extends PreprocessorBaseParagraph {
    * @inheritDoc
    */
   public function paragraphBundle(): string {
-    return 'card';
+    return 'hero';
   }
 }
