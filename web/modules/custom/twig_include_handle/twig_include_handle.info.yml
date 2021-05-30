@@ -1,0 +1,5 @@
+name: Twig Include Handle
+description: 'Allows parsing of component include handle statements in Twig by Drupal.'
+package: Custom
+type: module
+core_version_requirement: ^8.8.0 || ^9.0
