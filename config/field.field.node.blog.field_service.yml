@@ -1,0 +1,21 @@
+uuid: 5c5569e2-70fb-483f-83ca-3a82ef1abe33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service
+    - node.type.blog
+id: node.blog.field_service
+field_name: field_service
+entity_type: node
+bundle: blog
+label: Service
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

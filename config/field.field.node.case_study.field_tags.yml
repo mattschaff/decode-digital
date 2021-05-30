@@ -1,0 +1,33 @@
+uuid: 233d3686-4a01-44bf-87da-625b6e4bcabf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.case_study
+    - taxonomy.vocabulary.author
+    - taxonomy.vocabulary.service
+    - taxonomy.vocabulary.tags
+id: node.case_study.field_tags
+field_name: field_tags
+entity_type: node
+bundle: case_study
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      author: author
+      service: service
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: author
+field_type: entity_reference

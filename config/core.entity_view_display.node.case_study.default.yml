@@ -1,50 +1,22 @@
-uuid: 6fdbda66-0139-49f0-9395-bede049ddefc
+uuid: d35a36cf-01f0-44fa-8bda-7fc98b570d84
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_flexible_content
-    - field.field.node.page.field_hero
-    - field.field.node.page.field_tags
-    - node.type.page
+    - field.field.node.case_study.field_case_study
+    - field.field.node.case_study.field_flexible_content
+    - field.field.node.case_study.field_hero
+    - field.field.node.case_study.field_tags
+    - node.type.case_study
   module:
     - entity_reference_revisions
-    - text
     - user
-_core:
-  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
-id: node.page.default
+id: node.case_study.default
 targetEntityType: node
-bundle: page
+bundle: case_study
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_flexible_content:
-    type: entity_reference_revisions_entity_view
-    weight: 102
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
-  field_hero:
-    type: entity_reference_revisions_entity_view
-    weight: 103
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    region: content
-  field_tags:
+  field_case_study:
     weight: 104
     label: above
     settings:
@@ -52,8 +24,36 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
+  field_flexible_content:
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_hero:
     weight: 101
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_tags:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
     region: content
 hidden:
   search_api_excerpt: true

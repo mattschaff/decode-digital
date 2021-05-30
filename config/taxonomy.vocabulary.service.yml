@@ -1,0 +1,8 @@
+uuid: 49ffd5a8-8186-4f1b-ba77-2dba02400958
+langcode: en
+status: true
+dependencies: {  }
+name: Service
+vid: service
+description: ''
+weight: 0

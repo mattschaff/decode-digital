@@ -1,0 +1,68 @@
+uuid: f670dfb4-fe8e-468a-bcc9-05c6d8e63124
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog.field_author
+    - field.field.node.blog.field_flexible_content
+    - field.field.node.blog.field_hero
+    - field.field.node.blog.field_service
+    - field.field.node.blog.field_tags
+    - node.type.blog
+  module:
+    - entity_reference_revisions
+    - user
+id: node.blog.default
+targetEntityType: node
+bundle: blog
+mode: default
+content:
+  field_author:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_flexible_content:
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_hero:
+    weight: 101
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_service:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tags:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

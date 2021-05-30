@@ -1,0 +1,31 @@
+uuid: 7858d005-d718-443d-a8c0-78996f5ae76a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.service.field_card_image
+    - field.field.node.service.field_flexible_content
+    - field.field.node.service.field_hero
+    - field.field.node.service.field_service
+    - field.field.node.service.field_tags
+    - node.type.service
+  module:
+    - user
+id: node.service.teaser
+targetEntityType: node
+bundle: service
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_card_image: true
+  field_flexible_content: true
+  field_hero: true
+  field_service: true
+  field_tags: true
+  search_api_excerpt: true

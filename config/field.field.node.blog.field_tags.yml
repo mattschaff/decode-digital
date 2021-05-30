@@ -1,0 +1,31 @@
+uuid: 999c2e0c-b6db-44a4-98f9-9c8bcb12f338
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.blog
+    - taxonomy.vocabulary.case_study
+    - taxonomy.vocabulary.tags
+id: node.blog.field_tags
+field_name: field_tags
+entity_type: node
+bundle: blog
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      case_study: case_study
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: case_study
+field_type: entity_reference
