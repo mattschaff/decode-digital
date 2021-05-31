@@ -7,3 +7,4 @@ import './liquid_drop/liquid_drop';
 import './header/header';
 import './footer/footer';
 import './case_study_list/case_study_list';
+import './blog_list/blog_list';

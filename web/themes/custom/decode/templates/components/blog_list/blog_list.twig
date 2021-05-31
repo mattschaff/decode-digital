@@ -1,0 +1,12 @@
+{% set cards = [] %}
+{% for blog_post in blog_list %}
+  {% set card = {
+      image: blog_post.image,
+      text: blog_post.text,
+      title: blog_post.title,
+      link: blog_post.link,
+  } %}
+  {% set cards = cards|merge([card]) %}
+{% endfor %}
+
+{% include '@card_list' %}

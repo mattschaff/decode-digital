@@ -1,0 +1,25 @@
+uuid: be958975-85e6-4525-b869-058055e46c68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blog_list.field_blog_posts
+    - paragraphs.paragraphs_type.blog_list
+id: paragraph.blog_list.default
+targetEntityType: paragraph
+bundle: blog_list
+mode: default
+content:
+  field_blog_posts:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

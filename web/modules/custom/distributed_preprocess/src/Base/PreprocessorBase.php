@@ -4,6 +4,7 @@ namespace Drupal\distributed_preprocess\Base;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\distributed_preprocess\Service\DistributedPreprocess;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -20,20 +21,29 @@ abstract class PreprocessorBase implements ContainerInjectionInterface {
   protected $service;
 
   /**
+   * Entity type manager
+   *
+   * @var EntityTypeManagerInterface
+   */
+  protected $entityTypeManager;
+
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
     return new static();
   }
 
-  /**
-   * Set base services
-   *
-   * @param DistributedPreprocess $service
-   * @return PreprocessorBase
-   */
-  public function setBaseServices(DistributedPreprocess $service): PreprocessorBase {
+   /**
+    * Set base services
+    *
+    * @param DistributedPreprocess $service
+    * @param EntityTypeManagerInterface $EntityTypeManager
+    * @return PreprocessorBase
+    */
+  public function setBaseServices(DistributedPreprocess $service, EntityTypeManagerInterface $EntityTypeManager): PreprocessorBase {
     $this->service = $service;
+    $this->entityTypeManager = $EntityTypeManager;
     return $this;
   }
 

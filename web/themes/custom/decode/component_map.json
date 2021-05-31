@@ -1,4 +1,5 @@
 {
+  "@blog_list": "templates/components/blog_list/blog_list.twig",
   "@card": "templates/components/card/card.twig",
   "@card_list": "templates/components/card_list/card_list.twig",
   "@careers": "templates/components/careers/careers.twig",
@@ -6,7 +7,7 @@
   "@contact_form": "templates/components/contact_form/contact_form.twig",
   "@copyright": "templates/components/copyright/copyright.twig",
   "@footer": "templates/components/footer/footer.twig",
-  "@hero": "templates/components/hero/hero.twig",
   "@header": "templates/components/header/header.twig",
+  "@hero": "templates/components/hero/hero.twig",
   "@liquid_drop": "templates/components/liquid_drop/liquid_drop.twig"
 }
