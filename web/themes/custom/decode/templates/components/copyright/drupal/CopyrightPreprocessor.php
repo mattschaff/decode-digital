@@ -2,6 +2,7 @@
 
 namespace Drupal\decode\theme\preprocessors;
 
+use Drupal\block_content\Entity\BlockContent;
 use Drupal\distributed_preprocess\Base\PreprocessorBaseBlockContent;
 
 class CopyrightPreprocessor extends PreprocessorBaseBlockContent {
@@ -10,8 +11,9 @@ class CopyrightPreprocessor extends PreprocessorBaseBlockContent {
    * @inheritDoc
    */
   public function preprocessBlockContent(array &$variables): void {
-    /** @todo extract Drupal variables */
-    $variables['injected'] = 'Injected value';
+    /** @var BlockContent $block */
+    $block = $variables['elements']['#block_content'];
+    $variables['text'] = $block->get('field_copyright_text')->value;
   }
 
   /**
