@@ -8,3 +8,4 @@ import './header/header';
 import './footer/footer';
 import './case_study_list/case_study_list';
 import './blog_list/blog_list';
+import './service_list/service_list';

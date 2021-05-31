@@ -9,5 +9,6 @@
   "@footer": "templates/components/footer/footer.twig",
   "@header": "templates/components/header/header.twig",
   "@hero": "templates/components/hero/hero.twig",
-  "@liquid_drop": "templates/components/liquid_drop/liquid_drop.twig"
+  "@liquid_drop": "templates/components/liquid_drop/liquid_drop.twig",
+  "@service_list": "templates/components/service_list/service_list.twig"
 }

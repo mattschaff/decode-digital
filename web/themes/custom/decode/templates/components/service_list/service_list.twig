@@ -1,0 +1,12 @@
+{% set cards = [] %}
+{% for service in service_list %}
+  {% set card = {
+      image: service.image,
+      text: service.text,
+      title: service.title,
+      link: service.link,
+  } %}
+  {% set cards = cards|merge([card]) %}
+{% endfor %}
+
+{% include '@card_list' %}
