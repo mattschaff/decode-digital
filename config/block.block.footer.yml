@@ -1,22 +1,22 @@
-uuid: ad9c01a0-25ea-457d-94a0-18711d2675ff
+uuid: b9613ca3-81ce-41ca-bfd1-31bd490b386c
 langcode: en
 status: true
 dependencies:
   config:
-    - fixed_block_content.fixed_block_content.copyright
+    - fixed_block_content.fixed_block_content.footer
   module:
     - fixed_block_content
   theme:
     - decode
-id: copyright
+id: footer
 theme: decode
 region: footer
-weight: -7
+weight: -8
 provider: null
-plugin: 'fixed_block_content:copyright'
+plugin: 'fixed_block_content:footer'
 settings:
-  id: 'fixed_block_content:copyright'
-  label: Copyright
+  id: 'fixed_block_content:footer'
+  label: Footer
   provider: fixed_block_content
   label_display: '0'
   view_mode: ''

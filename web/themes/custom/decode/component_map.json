@@ -4,6 +4,7 @@
   "@careers": "templates/components/careers/careers.twig",
   "@contact_form": "templates/components/contact_form/contact_form.twig",
   "@copyright": "templates/components/copyright/copyright.twig",
+  "@footer": "templates/components/footer/footer.twig",
   "@hero": "templates/components/hero/hero.twig",
   "@header": "templates/components/header/header.twig",
   "@liquid_drop": "templates/components/liquid_drop/liquid_drop.twig"

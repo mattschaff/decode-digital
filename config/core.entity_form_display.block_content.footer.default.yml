@@ -1,0 +1,20 @@
+uuid: d035b421-53f3-418d-92e9-ebc93e63b458
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.footer
+id: block_content.footer.default
+targetEntityType: block_content
+bundle: footer
+mode: default
+content:
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
