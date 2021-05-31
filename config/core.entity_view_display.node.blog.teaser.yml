@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.blog.field_author
+    - field.field.node.blog.field_card_image
     - field.field.node.blog.field_flexible_content
     - field.field.node.blog.field_hero
     - field.field.node.blog.field_service
@@ -24,6 +25,7 @@ content:
     region: content
 hidden:
   field_author: true
+  field_card_image: true
   field_flexible_content: true
   field_hero: true
   field_service: true

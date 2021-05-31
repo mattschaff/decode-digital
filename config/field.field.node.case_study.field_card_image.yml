@@ -1,0 +1,29 @@
+uuid: 4af626a3-ec81-4f7c-ad8e-37fe2406e210
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_card_image
+    - media.type.image
+    - node.type.case_study
+id: node.case_study.field_card_image
+field_name: field_card_image
+entity_type: node
+bundle: case_study
+label: 'Reference Image'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

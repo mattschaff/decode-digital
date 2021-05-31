@@ -8,6 +8,9 @@ dependencies:
     - paragraphs.paragraphs_type.card
     - paragraphs.paragraphs_type.card_list
     - paragraphs.paragraphs_type.careers
+    - paragraphs.paragraphs_type.case_study_list
+    - paragraphs.paragraphs_type.contact_form
+    - paragraphs.paragraphs_type.liquid_drop
   module:
     - entity_reference_revisions
 id: node.page.field_flexible_content
@@ -26,8 +29,11 @@ settings:
     negate: 0
     target_bundles:
       card: card
-      careers: careers
       card_list: card_list
+      careers: careers
+      case_study_list: case_study_list
+      contact_form: contact_form
+      liquid_drop: liquid_drop
     target_bundles_drag_drop:
       card:
         enabled: true
@@ -38,4 +44,16 @@ settings:
       careers:
         enabled: true
         weight: 4
+      case_study_list:
+        enabled: true
+        weight: 11
+      contact_form:
+        enabled: true
+        weight: 12
+      hero:
+        weight: 13
+        enabled: false
+      liquid_drop:
+        enabled: true
+        weight: 14
 field_type: entity_reference_revisions

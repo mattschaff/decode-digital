@@ -4,3 +4,6 @@ import './careers/careers';
 import './contact_form/contact_form';
 import './hero/hero';
 import './liquid_drop/liquid_drop';
+import './header/header';
+import './footer/footer';
+import './case_study_list/case_study_list';

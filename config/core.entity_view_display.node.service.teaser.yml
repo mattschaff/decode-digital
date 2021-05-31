@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.service.field_flexible_content
     - field.field.node.service.field_hero
     - field.field.node.service.field_service
+    - field.field.node.service.field_summary
     - field.field.node.service.field_tags
     - node.type.service
   module:
@@ -27,5 +28,6 @@ hidden:
   field_flexible_content: true
   field_hero: true
   field_service: true
+  field_summary: true
   field_tags: true
   search_api_excerpt: true

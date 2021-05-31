@@ -31,7 +31,7 @@ class CardPreprocessor extends PreprocessorBaseParagraph {
     $variables['title'] = $paragraph->get('field_title')->value;
     $variables['text'] = Markup::create($paragraph->get('field_text')->value);
     if (!$paragraph->get('field_link')->isEmpty()) {
-      $variables['cta'] = [
+      $variables['link'] = [
         'title' => $paragraph->get('field_link')->title,
         'url' => Url::fromUri($paragraph->get('field_link')->uri),
       ];

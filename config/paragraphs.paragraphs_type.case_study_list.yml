@@ -1,0 +1,10 @@
+uuid: 1bfdf4eb-7216-491c-8c5a-fa0eae527d72
+langcode: en
+status: true
+dependencies: {  }
+id: case_study_list
+label: 'Case Study List'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

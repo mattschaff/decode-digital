@@ -3,13 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.images
+    - field.field.node.case_study.field_card_image
     - field.field.node.case_study.field_case_study
     - field.field.node.case_study.field_flexible_content
     - field.field.node.case_study.field_hero
+    - field.field.node.case_study.field_summary
     - field.field.node.case_study.field_tags
     - node.type.case_study
   module:
-    - entity_reference_revisions
+    - entity_browser
+    - paragraphs
     - path
 id: node.case_study.default
 targetEntityType: node
@@ -22,6 +26,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_card_image:
+    weight: 125
+    settings:
+      entity_browser: images
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
   field_case_study:
     weight: 124
     settings:
@@ -35,22 +54,46 @@ content:
   field_flexible_content:
     weight: 122
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: paragraphs
     region: content
   field_hero:
     weight: 121
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+  field_summary:
+    weight: 126
+    settings:
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_autocomplete
+    type: string_textarea
     region: content
   field_tags:
     weight: 123
@@ -109,7 +152,7 @@ content:
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

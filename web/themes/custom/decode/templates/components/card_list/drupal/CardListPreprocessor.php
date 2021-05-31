@@ -22,10 +22,10 @@ class CardListPreprocessor extends PreprocessorBaseParagraph {
       $cards[] = [
         'image' => $image,
         'text' => $text,
-        'cta' => $cta,
+        'link' => $cta,
         'title' => $title,
       ] = $this->getPreprocessedRenderArrayForEntity('paragraph', $card_object)
-        + array_fill_keys(['image', 'text', 'cta', 'title'], null);
+        + array_fill_keys(['image', 'text', 'link', 'title'], null);
     }
   }
 

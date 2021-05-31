@@ -1,0 +1,22 @@
+uuid: ee7da594-0d3d-4998-bba4-a4f4761cac8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.case_study_list.field_case_studies
+    - paragraphs.paragraphs_type.case_study_list
+id: paragraph.case_study_list.default
+targetEntityType: paragraph
+bundle: case_study_list
+mode: default
+content:
+  field_case_studies:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  search_api_excerpt: true

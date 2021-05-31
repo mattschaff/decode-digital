@@ -1,0 +1,25 @@
+uuid: cbb17ce7-475b-4c04-b5e7-9eda4d015909
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.case_study_list.field_case_studies
+    - paragraphs.paragraphs_type.case_study_list
+id: paragraph.case_study_list.default
+targetEntityType: paragraph
+bundle: case_study_list
+mode: default
+content:
+  field_case_studies:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.service.field_flexible_content
     - field.field.node.service.field_hero
     - field.field.node.service.field_service
+    - field.field.node.service.field_summary
     - field.field.node.service.field_tags
     - node.type.service
   module:
@@ -51,6 +52,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_summary:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_tags:
     weight: 103

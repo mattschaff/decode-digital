@@ -4,10 +4,13 @@ namespace Drupal\distributed_preprocess\Base;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\distributed_preprocess\Service\DistributedPreprocess;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 abstract class PreprocessorBase implements ContainerInjectionInterface {
+
+  use StringTranslationTrait;
 
   /**
    * Distributed preprocess service

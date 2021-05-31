@@ -1,0 +1,12 @@
+{% set cards = [] %}
+{% for case_study in case_studies %}
+  {% set card = {
+      image: case_study.image,
+      text: case_study.text,
+      title: case_study.title,
+      link: case_study.link,
+  } %}
+  {% set cards = cards|merge([card]) %}
+{% endfor %}
+
+{% include '@card_list' %}

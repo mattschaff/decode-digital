@@ -2,6 +2,7 @@
   "@card": "templates/components/card/card.twig",
   "@card_list": "templates/components/card_list/card_list.twig",
   "@careers": "templates/components/careers/careers.twig",
+  "@case_study_list": "templates/components/case_study_list/case_study_list.twig",
   "@contact_form": "templates/components/contact_form/contact_form.twig",
   "@copyright": "templates/components/copyright/copyright.twig",
   "@footer": "templates/components/footer/footer.twig",
