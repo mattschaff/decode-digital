@@ -1,0 +1,13 @@
+uuid: 5ebf0537-265e-4f98-9f15-d96a1c95ec16
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.header
+id: block_content.header.default
+targetEntityType: block_content
+bundle: header
+mode: default
+content: {  }
+hidden:
+  search_api_excerpt: true

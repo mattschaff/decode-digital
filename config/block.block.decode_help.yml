@@ -11,7 +11,7 @@ _core:
 id: decode_help
 theme: decode
 region: header
-weight: 0
+weight: 1
 provider: null
 plugin: help_block
 settings:

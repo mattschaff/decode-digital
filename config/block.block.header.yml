@@ -1,0 +1,23 @@
+uuid: 9ed80a94-1f24-4bde-a33a-cdcf0f64d809
+langcode: en
+status: true
+dependencies:
+  config:
+    - fixed_block_content.fixed_block_content.header
+  module:
+    - fixed_block_content
+  theme:
+    - decode
+id: header
+theme: decode
+region: header
+weight: -8
+provider: null
+plugin: 'fixed_block_content:header'
+settings:
+  id: 'fixed_block_content:header'
+  label: Header
+  provider: fixed_block_content
+  label_display: '0'
+  view_mode: ''
+visibility: {  }

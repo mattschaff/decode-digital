@@ -5,5 +5,6 @@
   "@contact_form": "templates/components/contact_form/contact_form.twig",
   "@copyright": "templates/components/copyright/copyright.twig",
   "@hero": "templates/components/hero/hero.twig",
+  "@header": "templates/components/header/header.twig",
   "@liquid_drop": "templates/components/liquid_drop/liquid_drop.twig"
 }

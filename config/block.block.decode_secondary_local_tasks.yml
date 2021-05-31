@@ -9,7 +9,7 @@ _core:
 id: decode_secondary_local_tasks
 theme: decode
 region: header
-weight: -2
+weight: 0
 provider: null
 plugin: local_tasks_block
 settings:

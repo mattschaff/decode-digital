@@ -11,7 +11,7 @@ _core:
 id: decode_messages
 theme: decode
 region: header
-weight: -5
+weight: -4
 provider: null
 plugin: system_messages_block
 settings:
